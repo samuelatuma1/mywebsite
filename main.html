@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta name='viewport' content='width=device-width initial-scale=1 shrink-to-fit=no'>
+        <title>About Samuel Atuma</title>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                /*
+                function changeDivBorder(color){
+                const divBorders = document.querySelectorAll('div')
+                divBorders.forEach(function(divBorder){
+                            divBorder.style.border = color;
+                        })
+                    }
+                    */
+
+                document.querySelectorAll('.changeColor').forEach(function(theme){
+                    theme.onclick = function() {
+                        var color = this.getAttribute('id')
+
+                        const bodyStyle = document.querySelector('body').style
+                        
+                        bodyStyle.backgroundColor = color;
+                        if (color === 'white'){
+                        bodyStyle.color = 'black';
+                        changeDivBorder('black')
+                        
+
+                        }
+                        else{
+                            bodyStyle.color = 'white'; 
+                        }
+
+                        
+                    }
+                })
+                
+            })
+        </script>
+
+        <style>
+            body{
+                font-family:Arial, Helvetica, sans-serif;
+            }
+            #about{
+                padding-left: 10px;
+            }
+
+            #aboutHouse{
+                display: flex;
+                flex-wrap: wrap;
+               
+
+            }
+            #profile{
+                max-height: 600px;
+                
+            }
+
+            .social{
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+            }
+            #profile #imageholder{
+                width: 100%;
+                background-image: url('undraw_Photos_re_pvh3.svg');
+            }
+            #imageholder img{
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+                display: block;
+                margin: auto;
+            
+                
+            }
+
+
+            @media (max-width: 800px) {
+                #profile{
+                    width: 100%;
+
+                }
+            }
+            @media (min-width: 800px) {
+                #profile{
+                    width: 30%;
+                }
+                #moreAboutMe{
+                    width: 60%;
+                }
+            }
+            .changeColor{
+                text-align: center;
+                width: 25px;
+                height: 25px;
+                border-radius: 50%;
+                display: block;
+                border: 1px solid pink;
+            }
+            .changeColor:hover{
+                border: 2px solid pink;
+            }
+            .backgroundTheme{
+                display: flex;
+                flex-wrap: wrap;
+                text-align: center;
+                
+            }
+
+
+
+        </style>
+    </head>
+
+    <body>
+        <h1 style='text-align: center;'>
+            Hello, I am Samuel Atuma <br />
+           </h1>
+
+        <div id='aboutHouse'>
+
+            <div id='profile'>
+                
+                <div id='imageholder'>
+                    <img src='OIPC59PL0E2.jpg' alt='profile picture'>
+                </div>
+                <div style='margin: auto;'>
+                    <h3 style='text-align: center;'>
+                    <span>
+                        <a href='https://linkedin.com/in/atuma-samuel-442976162'>
+                            <img src='linkedin-app-logo.png' alt='linkedIn site' class='social' />
+                        </a>
+                    </span>
+
+                    <span>
+                        <a href='mailto:atumasaake@gmail.com'>
+                            <img src='email.png' alt='email me' class='social' />
+                        </a>
+                    </span>
+                </h3>
+                </div>
+                <div id='about'>
+                    
+                    <p>
+                        Have a problem? <br/>
+                        Give me an hour and the wifi password, 
+                        thank me later.
+
+                    </p>
+                    <p>
+                        Personalize Theme
+                    </p>
+                    <section  class='backgroundTheme'>
+                        <span class='changeColor' id='rgb(7, 11, 0)' style='background-color: rgb(7, 11, 0);'></span>
+                        <span class='changeColor' id='white' style='background-color: white;'></span>
+                        <span class='changeColor' id='#444C38' style='background-color: #444C38;'></span>
+                    </section>
+                </div>
+
+            </div>
+            
+            <div id='moreAboutMe'>
+                <style>
+                    #moreAboutMe{
+                        display: flex;
+                        flex-wrap: wrap;
+                        margin: 10px;
+                        border-radius: 20px;;
+                        
+                    }
+
+                    #bio, #expertise{
+                        width: 100%;
+                        
+                        padding: 10px; 
+                        border: 1px solid rgb(239, 234, 234);
+                        border-radius: 15px;
+                        margin-bottom: 5px;
+                        
+                    }
+
+                    #tools{
+                        
+                        display: flex;
+                        flex-wrap: wrap;
+                        align-items: center;
+                        justify-content: space-evenly;
+                    }
+
+                    #tools span{
+                        width: 100px;
+                        background-color: pink;
+                        color: rgb(252, 235, 235);
+                        padding: 10px;
+                        text-align: center;
+                        border: 1px solid pink;
+                        border-radius: 10px;
+                        margin: 3px;
+                    }
+
+
+                </style>
+                <div id='bio'>
+                    <h2>About Me</h2>
+                    <p>
+                        I am a full stack developer interested in learning and everything chocolate.
+                        <br/>
+                        I love getting my hands dirty working on new projects and revisiting old ones to see how they can be improved upon.
+
+                    </p>
+                   
+
+                </div>
+
+                <div id='expertise'>
+                
+                    <h2>Top Expertise</h2>
+                    <br/>
+                    <p>
+                        Full stack developer with proficiency in django and Javascript:
+                        <a href='' target='_blank'>Resume</a>
+                    </p>
+                        <div id='tools'>
+                            <span>Python</span> <span>Django</span>
+                            <span>Javascript</span> <span>React</span>
+                            <span>Postgres</span> <span>JS Charts</span>
+                            <span>HTML/CSS</span> <span>Microsoft Azure</span>
+                        </div>
+                    
+                </div>
+
+            </div>
+    </div>
+
+    <hr/>
+
+        <h2 style='text-align: center;'>Projects</h2>
+
+    <div class='projects'>
+        
+        <br/><br/>
+        <style>
+            .projects{
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .project{
+                width: 300px;
+                border: 1px solid grey;
+                margin: auto;
+                margin-bottom: 10px;
+            }
+            .project section{
+                margin: 10px;
+                
+            }
+            .project img{
+                width: 100%;
+            }
+            #projectTools{
+                padding-top: 15px;
+                border-top: 1px solid rgb(210, 210, 210);
+            }
+            #projectTools span{
+                background-color: inherit;
+                border-radius: 5px;
+                padding: 3px;
+                border: 1px solid rgb(232, 229, 229);
+            }
+        </style>
+
+        <div class='project'>
+            <img src='bole2.jfif' alt='project1' />
+            <section>
+                <h3>Food ordering application</h3>
+                <p>An online food ordering web application that allows for
+                    <ul>
+                        <li>Easy three step order process</li>
+                        <li>Easy content management by admin</li>
+                        <li>Consumer purchase update</li>
+                        <li>Email interaction with customers </li>
+                    </ul>
+                </p>
+
+            </section>
+            
+            <section id='projectTools'>
+                <span>Python</span> <span>Django</span>
+                <span>JavaScript</span> <span>SQLite</span>
+
+            </section>
+
+        </div>
+
+
+        <div class='project'>
+            <img src='bole2.jfif' alt='project1' />
+            <section>
+                <h3>Food ordering application</h3>
+                <p>An online food ordering web application that allows for
+                    <ul>
+                        <li>Easy three step order process</li>
+                        <li>Easy content management by admin</li>
+                        <li>Consumer purchase update</li>
+                        <li>Email interaction with customers </li>
+                    </ul>
+                </p>
+
+            </section>
+            
+            <section id='projectTools'>
+                <span>Python</span> <span>Django</span>
+                <span>JavaScript</span> <span>SQLite</span>
+
+            </section>
+
+        </div>
+
+
+        <div class='project'>
+            <img src='bole2.jfif' alt='project1' />
+            <section>
+                <h3>Food ordering application</h3>
+                <p>An online food ordering web application that allows for
+                    <ul>
+                        <li>Easy three step order process</li>
+                        <li>Easy content management by admin</li>
+                        <li>Consumer purchase update</li>
+                        <li>Email interaction with customers </li>
+                    </ul>
+                </p>
+
+            </section>
+            
+            <section id='projectTools'>
+                <span>Python</span> <span>Django</span>
+                <span>JavaScript</span> <span>SQLite</span>
+
+            </section>
+
+        </div>
+
+
+        <div class='project'>
+            <img src='bole2.jfif' alt='project1' />
+            <section>
+                <h3>Food ordering application</h3>
+                <p>An online food ordering web application that allows for
+                    <ul>
+                        <li>Easy three step order process</li>
+                        <li>Easy content management by admin</li>
+                        <li>Consumer purchase update</li>
+                        <li>Email interaction with customers </li>
+                    </ul>
+                </p>
+
+            </section>
+            
+            <section id='projectTools'>
+                <span>Python</span> <span>Django</span>
+                <span>JavaScript</span> <span>SQLite</span>
+
+            </section>
+
+        </div>
+
+    </div>
+
+    </body>
+</html>
